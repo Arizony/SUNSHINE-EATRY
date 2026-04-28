@@ -115,18 +115,8 @@
                 return;
             }
 
-            if (password.length < 5) {
-                showNotification('Password must be at least 5 characters long', 'error');
-                return;
-            }
-
-            if (password!==password) {
-                showNotification('password too weak!', 'error');
-                return;
-            }
-
-            if(postal.length >6) {
-                showNotification('invalid!', 'error');
+            if (password.length < 8) {
+                showNotification('Password too weak, it must be at least 8 characters long', 'error');
                 return;
             }
 
@@ -142,14 +132,14 @@
                 return;
             }
 
-            // Basic postal code validation (adjust for your region)
+            // function postalcode  validation ('adjust for your region')
             // const postalRegex = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/;
             // if (!postalRegex.test(postal)) {
             //     showNotification('Please enter a valid postal code', 'error');
             //     return;
             // }
 
-            // Simulate signup (replace with actual registration)
+            Simulatesignup ('replace with actual registration')
             showNotification('Creating your account...', 'info');
 
             setTimeout(() => {
