@@ -125,21 +125,14 @@
                 return;
             }
 
-            // Basic phone validation
+            // Phone validation
             const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
             if (!phoneRegex.test(phone.replace(/[\s\-\(\)]/g, ''))) {
                 showNotification('Please enter a valid phone number', 'error');
                 return;
             }
 
-            // function postalcode  validation ('adjust for your region')
-            // const postalRegex = /^[A-Za-z]\d[A-Za-z][ -]?\d[A-Za-z]\d$/;
-            // if (!postalRegex.test(postal)) {
-            //     showNotification('Please enter a valid postal code', 'error');
-            //     return;
-            // }
-
-            Simulatesignup ('replace with actual registration')
+            // Simulate signup
             showNotification('Creating your account...', 'info');
 
             setTimeout(() => {
