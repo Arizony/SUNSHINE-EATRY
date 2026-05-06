@@ -71,7 +71,13 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="cart.js"></script>
     <script>
+        // Initialize cart system
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeCart();
+        });
+
         // Login form functionality
         document.getElementById('loginForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -91,6 +97,7 @@
             setTimeout(() => {
                 // Mock successful login
                 localStorage.setItem('loggedIn', 'true');
+                localStorage.setItem('userEmail', email);
                 showNotification('Login successful! Redirecting...', 'success');
                 setTimeout(() => {
                     window.location.href = 'menu.html';
